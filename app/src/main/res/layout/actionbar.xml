@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change layout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="5dip"
+        android:id="@+id/changeLayout"
+        />
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/changeLayout"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_centerVertical="true"
+        android:id="@+id/divider"
+        android:background="?android:attr/dividerVertical"
+        />
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change content"
+        android:layout_toLeftOf="@id/divider"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:id="@+id/changeContent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/fragmentList"
+        android:text="MAP"
+        android:layout_alignStart="@id/changeContent"
+        android:layout_alignLeft="@id/changeContent"
+        android:layout_below="@id/changeContent"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="title_background">#ff888888</color>
+    <color name="title_text">#ffffffff</color>
+    <color name="textBody">#ff29549f</color>
+    <color name="foreground">#ff29549f</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#ffa500</color>
+    <color name="transparent">#00000000</color>
+</resources>

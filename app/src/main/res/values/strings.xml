@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ThorMobile5.0</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login_close">close</string>
+    <string name="login_login">Login</string>
+    <string name="login_utforare">Utförare</string>
+    <string name="login_password">Lösenord</string>
+    <string name="login_username">Användarnamn</string>
+    <string name="dash_home">Home</string>
+    <string name="dash_installningar">Inställningar</string>
+    <string name="dash_kortur">Körtur</string>
+    <string name="dash_kororder">Körorder</string>
+    <string name="Version">Version: x.x</string>
+    <string name="UpdateNeeded">Uppdatera vänligen</string>
+    <string name="Synka">Synka</string>
+    <string name="not_logged_in">Vänligen logga in</string>
+    <string name="title_activity_map_over_lay">MapOverLay</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Change layout</string>
+</resources>
