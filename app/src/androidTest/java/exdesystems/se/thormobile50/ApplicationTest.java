@@ -9,10 +9,12 @@ import android.widget.TextView;
 
 import java.util.concurrent.CountDownLatch;
 
+import exdesystems.se.thormobile50.Activities.MapOverLayActivity;
+
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
  */
-public class ApplicationTest extends ActivityInstrumentationTestCase2<HomeScreenActivity>{
+public class ApplicationTest extends ActivityInstrumentationTestCase2<MapOverLayActivity>{
     private Activity mFirstTestActivity;
     private ImageView imageKorTur;
     private ImageView imageKorOrder;
@@ -20,7 +22,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<HomeScreen
     private TextView mFirstTestText;
 
     public ApplicationTest() {
-        super(HomeScreenActivity.class);
+        super(MapOverLayActivity.class);
     }
 
 
@@ -28,19 +30,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<HomeScreen
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mFirstTestActivity = getActivity();
-        mFirstTestText =
-                (TextView) mFirstTestActivity
-                        .findViewById(R.id.korordertxt);
-        imageKorTur =
-                (ImageView) mFirstTestActivity
-                        .findViewById(R.id.dashKorturStart);
-        imageKorOrder =
-                (ImageView) mFirstTestActivity
-                        .findViewById(R.id.dashKororderStart);
-        imageInstallningar =
-                (ImageView) mFirstTestActivity
-                        .findViewById(R.id.dashInstallningar);
+
     }
     @MediumTest
     public void testPreconditions() {
@@ -67,15 +57,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<HomeScreen
             @Override
             public void run() {
                 try {
-                    HomeScreenActivity.GetUpdateLink task = new HomeScreenActivity.GetUpdateLink() {
-                        @Override
-                        protected void onPostExecute(String newLink) {
-                            text[0] = newLink;
-                            signal.countDown();
-                            super.onPostExecute(newLink);
-                        }
-                    };
-                    task.execute("http://int.exdesystems.se/thorrestserver/400/thor_rest_service.svc");
+
                 } catch (Exception e) {
                     Log.e("ERROR", e.getMessage());
                     fail();
@@ -95,16 +77,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<HomeScreen
             @Override
             public void run() {
                 try {
-                    HomeScreenActivity.GetUpdateAvailableStatus task = new HomeScreenActivity.GetUpdateAvailableStatus() {
-                        @Override
-                        protected void onPostExecute(String version) {
-                            text[0] = version;
-                            signal.countDown();
-                            super.onPostExecute(version);
 
-                        }
-                    };
-                    task.execute("http://int.exdesystems.se/thorrestserver/400/thor_rest_service.svc");
                 } catch (Exception e) {
                     Log.e("ERROR", e.getMessage());
                     fail();
